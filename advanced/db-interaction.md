@@ -166,7 +166,9 @@ if ($pdo->inTransaction()) {
 } 
 } catch (\Exception $e) {
     echo "Uh oh! {$e->getMessage()}";
+if ($pdo->inTransaction()) {
     $pdo->rollBack();
+}
 }
 ```
 
