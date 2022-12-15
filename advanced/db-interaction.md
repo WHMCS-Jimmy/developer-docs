@@ -160,7 +160,6 @@ try {
         ]
     );
 
-    
 if ($pdo->inTransaction()) {
     $pdo->commit();
 } 
