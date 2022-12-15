@@ -160,7 +160,10 @@ try {
         ]
     );
 
+    
+if ($pdo->inTransaction()) {
     $pdo->commit();
+} 
 } catch (\Exception $e) {
     echo "Uh oh! {$e->getMessage()}";
     $pdo->rollBack();
